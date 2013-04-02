@@ -1,0 +1,101 @@
+
+// Project: PROJECT NAME
+// File Purpose: Global variable/mixin stylesheet (SCSS).
+// Created by Norex
+// Date: CURRENT DATE
+// Prepared by Justin Bellefontaine @ Norex
+
+// All textual content contained herein is copyright and property of 
+// Norex.ca. Unauthorized use or duplication will not be tolerated.
+
+
+// Import Google fonts with @import here 
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100,700,900|Roboto+Condensed:400,700,300);
+
+// Import additional Compass modules 
+@import "compass/layout.scss";
+@import "compass/css3/box-sizing";
+
+// Define desktop page width
+$pagewidth: 1140px;
+
+// Neutral Colors
+$lightgray: #ddd;
+$darkgray: #444;
+
+// Project Colors
+$norexpink: #ed1556;
+$norexblue: #0082c8;
+$norexorange: #f15c22;
+$norexgreen: #47aa42;
+
+
+// Define Fonts 
+@mixin font-roboto {
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+@mixin font-robotocondensed {
+	font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+}
+
+// Remove basic formatting from unordered lists
+@mixin reset {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+// Background Clip (for transparent borders)
+@mixin backgroundclip {
+	background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	-webkit-background-clip: padding-box;
+	-o-background-clip: padding-box;
+	-ms-background-clip: padding-box;
+}
+
+// Animations 
+@mixin transition($property,$duration,$delay) {
+	transition: $property $duration ease $delay;
+	-moz-transition: $property $duration ease $delay;
+	-webkit-transition: $property $duration ease $delay;
+	-o-transition: $property $duration ease $delay;
+	-ms-transition: $property $duration ease $delay;
+}
+
+// Media Queries 
+
+@mixin media($type) {
+
+	@if $type == desktop {
+		@media (min-width: 1200px) {
+			@content;
+		}
+	}
+
+	@else if $type == ipad {
+		@media (min-width: 768px) and (max-width: 979px) {
+			@content;
+		}
+	}
+
+	@else if $type == tablet {
+		@media (max-width: 767px) {
+			@content;
+		}
+	}
+
+	@else if $type == phone-landscape {
+		@media (max-width: 480px) {
+			@content;
+		}
+	}
+
+	@else if $type == phone-portrait {
+		@media (max-width: 320px) {
+			@content;
+		}
+	}
+
+}
