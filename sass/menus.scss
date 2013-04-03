@@ -1,0 +1,323 @@
+
+// Project: PROJECT NAME
+// File Purpose: Menus stylesheet (SCSS).
+// Created by Norex
+// Date: CURRENT DATE
+// Prepared by Justin Bellefontaine @ Norex
+
+// All textual content contained herein is copyright and property of 
+// Norex.ca. Unauthorized use or duplication will not be tolerated.
+
+// TABLE OF CONTENTS
+
+// S:01 Parent Level
+// S:02 Top Level
+// S:03 Second Level (First Dropdown)
+// S:04 Third Level (Flyouts)
+// S:05 Dropdown/Flyout Functions
+// S:06 Responsive Breakpoints
+
+
+// =================================================================
+
+
+// Import global SASS
+@import "settings";
+
+
+// ==|== S:01 Parent Level =========================================
+
+
+nav ul {
+	@include reset;
+}
+
+.menu-icon {
+	display: none;
+	margin-bottom: 14px;
+	color: $darkgray;
+	font-weight: 700;
+	text-transform: uppercase;
+	background: #efefef;
+	text-align: center;
+	padding: 10px;
+	@include font-robotocondensed;
+}
+
+
+// ==|== S:02 Top Level ============================================
+
+
+.main-nav li {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+}
+
+.main-nav > li {
+	margin: 0 10px;
+		&:first-child {
+			margin-left: 0 !important;
+		}
+}
+
+.main-nav li a {
+	color: $darkgray;
+	padding:5px 0;
+	display: block;
+	@include font-robotocondensed;
+	font-size: 1em;
+	font-weight: 700;
+	line-height: 1em;
+	text-transform: uppercase;
+	@include transition(all,.1s,0);
+		&:hover {
+			color: #ccc;
+			@include transition(all,.1s,0);
+		}
+		& span {
+			display: none;
+		}
+}
+
+
+// ==|== S:03 Second Level (First Dropdown) =========================
+
+
+.main-nav li ul {
+	left: 0;
+	list-style: none;
+	margin: 0;
+	min-width: 125px;
+	padding: 1px 0 0;
+	position: absolute;
+	top: 1em; // Top value must match line height of li's and anchors */
+	width: auto;
+	z-index: 2;
+}
+
+.main-nav li ul li {
+	line-height: 1em;
+	width: 100%;
+	text-align: left;
+}
+
+.main-nav li ul li a {
+	background: $lightgray;
+	border-top: 1px solid darken($lightgray,10%);
+	color: $darkgray;
+	cursor: pointer;
+	font-size: 0.9em;
+	font-weight: 400;
+	line-height: 1em;
+	padding: 5px 10px;
+	white-space: nowrap;
+	text-transform: none;
+	width: 100%;
+		&:hover {
+			background: $darkgray;
+			color: #fff;
+		}
+}
+
+.main-nav li ul li:first-child a {
+	border-top: none;
+}
+
+
+// ==|== S:04 Third Level (Flyouts) ====================================
+
+
+.main-nav li ul li ul {
+	left: 100%;
+	min-width: 0;
+	top: 0;
+	margin-left: -0.5em;
+	@include transition(all,.2s,0);
+	z-index: 1;
+}
+
+.main-nav li ul li ul li a {
+	background: $darkgray;
+	border-top: 1px solid #222;
+	color: #fff;
+		&:hover {
+			background: $lightgray;
+			color: $darkgray;
+		}
+}
+
+
+// ==|== S:05 Dropdown/Flyout Functions =================================
+
+
+.main-nav > li > ul,
+.main-nav > li > ul > li > ul {
+	visibility: hidden;
+	opacity: 0;
+	@include transition(all,.05s,0);
+}
+
+.main-nav > li:hover > ul,
+.main-nav > li > ul > li:hover > ul {
+	visibility: visible;
+	opacity: 1;
+	@include transition(all,.2s,0);
+}
+
+// Second level slide from top
+.main-nav > li:hover > ul {
+	margin-top: 0.5em;
+}
+
+// Second level slide from left
+.main-nav > li:hover > ul > li:hover > ul {
+	margin-left: 0;
+}
+
+// IE7 width fix
+.lt-ie8 .main-nav li ul li,
+.lt-ie8 .main-nav li ul li a {
+	line-height: 1em;
+	white-space: normal;
+	width: 150px;
+}
+
+
+// ==|== S:06 Responsive Breakpoints ===============================
+
+
+// Desktop 
+@include media(desktop) {
+	
+}
+
+// iPad 
+@include media(ipad) {
+
+
+
+}
+
+// Tablet (funnels down to phone)
+@include media(tablet) {
+
+
+
+}
+
+// Phone Landscape
+@include media(phone-landscape) {
+	
+	nav {
+		overflow: hidden;
+	}
+
+	.main-nav {
+		max-height: 0;
+		overflow: hidden;
+		@include transition(all,.2s,0);
+			& ul {
+				width: 100%;
+				overflow: hidden;
+			}
+			& li {
+				display: block;
+				text-align: left;
+				clear: left;
+				margin: 0 0 1px !important;
+			}
+		& .has-submenu.active > a {
+			background: $darkgray !important;
+			color: #fff !important;
+			position: relative;
+			&:hover {
+				background: $darkgray !important;
+			}
+		}
+		& > .has-submenu a span {
+			position: absolute;
+			display: block;
+			right: 0;
+			top: 0;
+			background: $darkgray;
+			color: #fff;
+			padding: 15px 18px;
+			font-weight: 700;
+			display: block;
+			min-width: 45px;
+			text-align: center;
+		}
+		& > .has-submenu > ul > li > a {
+			background: $lightgray !important;
+			&:hover {
+				background: darken($lightgray,15%) !important;
+			}
+		}
+		& > .has-submenu > ul > li > ul > li > a {
+			background: darken($lightgray,15%) !important;
+			&:hover {
+				background: darken($lightgray,25%) !important;
+			}
+		}
+		& li a {
+			padding: 15px !important;
+			background: #ebebeb !important;
+			border: none !important;
+			color: $darkgray !important;
+			&:hover {
+				background: $lightgray !important;
+			}
+		}
+	}
+
+	.main-nav li ul {
+		max-height: 0;
+		position: static !important;
+		float: left;
+		clear: left;
+		visibility: visible;
+		opacity: 1;
+		margin: 0 !important;
+		width: 100%;
+			& li {
+				width: 100%;
+				clear: left;
+			}
+	}
+
+	.main-nav.active,
+	.main-nav.active > .active > ul,
+	.main-nav.active > .active > ul > .active > ul {
+		max-height: 55em;
+		padding: 0 !important;
+		margin: 1px 0 0 !important;
+		@include transition(all,.5s,0);
+		visibility:visible;
+		opacity:1;
+	}
+
+	.menu-icon {
+		display: block;
+	}
+
+}
+
+// Phone Portrait
+@include media(phone-portrait) {
+	
+}
+
+// Retina 
+@media
+only screen and (-webkit-min-device-pixel-ratio:2),
+only screen and (min--moz-device-pixel-ratio:2),
+only screen and (-moz-min-device-pixel-ratio:2),
+only screen and (-o-min-device-pixel-ratio:2/1),
+only screen and (min-device-pixel-ratio:2),
+only screen and (min-resolution:192dpi),
+only screen and (min-resolution:2dppx) {
+
+
+
+}

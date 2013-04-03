@@ -1,0 +1,722 @@
+
+// Project: PROJECT NAME
+// File Purpose: Primary stylesheet (SCSS).
+// Created by Norex
+// Date: CURRENT DATE
+// Prepared by Justin Bellefontaine @ Norex
+
+// All textual content contained herein is copyright and property of 
+// Norex.ca. Unauthorized use or duplication will not be tolerated.
+
+// TABLE OF CONTENTS
+
+// S:01 Generic Site Styles
+// S:02 Header
+// S:03 Navigation
+// S:04 Content
+// S:05 Footer
+// S:06 Typography
+// S:07 Forms
+// S:08 Helper Classes
+// S:09 IE Tweaks
+// S:10 Responsive Breakpoints
+
+
+// =================================================================
+
+
+// Import global SASS
+@import "settings";
+
+
+// ==|== S:01 Generic Site Styles ==================================
+
+
+// Custom selection color 
+::-moz-selection {
+	background: #efefef;
+	text-shadow: none;
+}
+::selection {
+	background: #efefef;
+	text-shadow: none;
+}
+
+// Force text antialiasing in Webkit browsers
+html {
+	-webkit-font-smoothing: antialiased;
+}
+
+// Set base body font size
+body {
+	font-size: 16px;
+	// Using the "image-url" path --> background: transparent image-url('body-bg.jpg') repeat;
+}
+
+// Sitewide styles
+* {
+	@include box-sizing(border-box);
+	@include font-roboto;
+}
+
+.container {
+	width: $pagewidth;
+	margin: 0 auto;
+}
+
+
+// ==|== S:02 Header ===============================================
+
+
+
+
+
+// ==|== S:03 Navigation ===========================================
+
+
+
+
+
+// ==|== S:04 Content ==============================================
+
+
+
+
+
+// ==|== S:05 Footer ===============================================
+
+
+
+
+
+// ==|== S:06 Typography ===========================================
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@include font-roboto;
+}
+
+h1 {
+	font-weight: 100;
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+ul {
+	@include reset;
+}
+
+p,
+ul li,
+ol li {
+
+}
+
+a {
+	text-decoration: none;
+		&:hover {
+
+		}
+}
+
+// Tables 
+
+table {
+	border: 1px solid $lightgray;
+}
+
+table thead td,
+table th {
+	background: lighten($lightgray,10%);
+	padding: 10px;
+	text-align: left;
+	color: $darkgray;
+}
+
+table tr:nth-child(even) {
+	background: lighten($lightgray,10%);
+}
+
+table td {
+	padding: 10px;
+	color: $darkgray;
+	font-size: 0.8em;
+}
+
+// Buttons 
+.btn,
+input[type="submit"],
+input[type="button"],
+input[type="file"]:after {
+	//@include transition(all,.2s,.1s);
+	background: $lightgray;
+	color: $darkgray;
+	padding: 10px 15px;
+	font-size: 1rem;
+	position: relative;
+	border: none;
+	@include font-robotocondensed;
+	&.big {
+		padding: 15px 20px;
+		font-size: 1.250em;
+	}
+	&.bigger {
+		padding: 20px 25px;
+		font-size: 1.5em;
+	}
+	&:hover {
+		//@include transition(all,.2s,0);
+		background: $darkgray;
+		color: #fff;
+	}
+}
+
+// Arrows
+
+.add-arrow:after {
+	position: absolute;
+	content: " ";
+	width: 0;
+	height: 0;
+		border: {
+			style: solid;
+			color: transparent;
+			width: 10px;
+		}
+}
+
+.add-arrow.arrow-up:after {
+	border: {
+		bottom: {
+			color: $lightgray;
+		}
+	}
+	bottom: 100%;
+	left: 50%;
+	margin-left: -10px; // Must match the size of the arrow to center properly
+}
+
+.add-arrow.arrow-right:after {
+	border: {
+		left: {
+			color: $lightgray;
+		}
+	}
+	left: 100%;
+	top: 50%;
+	margin-top: -10px;
+}
+
+.add-arrow.arrow-down:after {
+	border: {
+		top: {
+			color: $lightgray;
+		}
+	}
+	top: 100%;
+	left: 50%;
+	margin-left: -10px;
+}
+
+.add-arrow.arrow-left:after {
+	border: {
+		right: {
+			color: $lightgray;
+		}
+	}
+	right: 100%;
+	top: 50%;
+	margin-top: -10px;
+}
+
+.btn.arrow-up:hover:after {
+	border-bottom-color: $darkgray;
+}
+
+.btn.arrow-right:hover:after {
+	border-left-color: $darkgray;
+}
+
+.btn.arrow-down:hover:after {
+	border-top-color: $darkgray;
+}
+
+.btn.arrow-left:hover:after {
+	border-right-color: $darkgray;
+}
+
+// Pagination
+
+.pagination {
+	@include reset;
+	text-align: center;
+}
+
+.pagination li {
+	display: inline-block;
+}
+
+.pagination li a {
+	font-weight: 700;
+	font-size: 1rem;
+	padding: 0 5px;
+	color: $darkgray;
+		&:hover {
+			color: $lightgray;
+		}
+		&.active {
+			font-weight: 700;
+			font-size: 1.250em;
+			color: #000;
+			cursor: default;
+			pointer-events: none;
+		}
+}
+
+// Tabs
+
+.tabs {
+	@include reset;
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid $lightgray;
+	& li {
+		float: left;
+		margin: 0 3px -1px 3px;
+		& a {
+			display: block;
+			background: lighten($lightgray,8%);
+			color: $darkgray;
+			font-weight: 700;
+			padding: 10px 15px;
+			border: 1px solid $lightgray;
+			@include transition(all,.2s,0);
+			border-radius: 2px 2px 0 0;
+			&:hover {
+				background: lighten($lightgray,4%);
+			}
+			&.active {
+				background: #fff;
+				border-bottom-color: #fff;
+				@include transition(all,.2s,0);
+			}
+		}
+	}
+}
+
+// Placeholder styling (IE, Firefox, and Chrome only)
+
+::-webkit-input-placeholder {
+	color: #ccc;
+}
+
+:-moz-placeholder {
+	color: #ccc;
+}
+
+:-ms-input-placeholder {
+	color: #ccc;
+}
+
+
+// ==|== S:07 Forms ================================================
+
+
+input[type="text"],
+input[type="email"],
+textarea {
+	border: 1px solid $lightgray;
+	background: #fff;
+	padding: 15px;
+	@include font-robotocondensed;
+	color: $darkgray;
+	width: 100%;
+	box-shadow: 3px 3px 10px 0 #f1f1f1 inset;
+	border-radius: 2px;
+}
+
+input[type="file"] {
+	font-size: 0.750em;
+	width: 100%;
+}
+
+textarea {
+	min-height: 250px;
+}
+
+// File Upload Styles (only works in Webkit browsers)
+input[type="file"] {
+	position: relative;
+	cursor: pointer;
+	&:hover:after {
+		background: $darkgray;
+		color: #fff;
+	}
+}
+
+input[type="file"]::-webkit-file-upload-button {
+	width: 0;
+	padding: 0;
+	margin: 0;
+	-webkit-appearance: none;
+	border: none;
+}
+
+input[type="file"]:after {
+	content: "Upload File";
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	background: $lightgray;
+	-webkit-appearance: none;
+}
+
+.gform_wrapper {
+	clear: left;
+}
+
+.gform_wrapper li {
+	width: 100%;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+
+// Validation Overrides (Gravity Forms)
+.gfield_error {
+	background: transparent!important;
+	padding: 0!important;
+	border: none!important;
+	margin: 0!important;
+}
+
+// Tooltips/Validation Messages
+.tooltip {
+	position: absolute;
+	left: 0;
+	width: auto;
+	padding: 5px 10px;
+	bottom: 100%;
+	color: #fff;
+	background: $darkgray;
+	display: block;
+	float: left;
+	font-size: 13px;
+	font-weight: 700;
+	margin: 0;
+	&.success {
+		background: $norexgreen;
+	}
+	&.error {
+		right: 0;
+		left: auto;
+		background: $norexpink;
+			&:after {
+				border-color: $norexpink transparent transparent transparent!important;
+				right: 5px;
+				left: auto;
+			}
+	}
+	&.success:after {
+		border-color: $norexgreen transparent transparent transparent;
+	}
+}
+
+.tooltip:after {
+	content: " ";
+		border: {
+			style: solid;
+			color: transparent;
+			width: 10px;
+		}
+	border-color: $darkgray transparent transparent transparent;
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 100%;
+	left: 5px;
+}
+
+// Custom Select Boxes
+.s-hidden {
+	visibility: hidden;
+	padding-right: 10px;
+}
+
+.select {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	@include font-robotocondensed;
+	color: $darkgray;
+	font-size: 1em;
+	border: 1px solid $lightgray;
+	padding: 15px;
+}
+
+.styled-select {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #fff;
+	padding: 0 10px;
+	font-weight: bold;
+	line-height: 53px; // Must change based on how large the parent selectbox is
+	box-shadow: 3px 3px 10px 0 #f1f1f1 inset;
+}
+
+.styled-select:after {
+	content: " ";
+	width: 0;
+	height: 0;
+	border: 5px solid transparent;
+	border-color: $darkgray transparent transparent transparent;
+	position: absolute;
+	top: 50%;
+	margin-top: -2px;
+	right: 10px;
+}
+
+.styled-select:active,
+.styled-select.active {
+	background: #eee;
+}
+
+.options {
+	display: none;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	right: 0;
+	left: 0;
+	z-index: 999;
+	margin: 0 0;
+	padding: 0 0;
+	list-style: none;
+	border: 1px solid $lightgray;
+	background: #fff;
+	& li {
+		padding: 5px;
+		margin: 0 0;
+		padding: 5px 10px;
+		&:hover {
+			background: $darkgray;
+			color: #fff;
+		}
+	}
+}
+
+
+// ==|== S:08 Helper Classes =======================================
+
+
+.last {
+	margin-right: 0;
+}
+
+.hide {
+	display: none;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.callout {
+	font-size: 4em;
+	line-height: 1em;
+	font-weight: 700;
+	& em {
+		font-style: normal;
+		color: #eb1e5b;
+		@include font-robotocondensed;
+	}
+}
+
+// FitVids
+.video-wrapper {
+	clear: left;
+}
+
+
+// ==|== S:09 IE Tweaks ============================================
+
+
+
+
+
+// ==|== S:10 Responsive Breakpoints ===============================
+
+
+// Desktop 
+@include media(desktop) {
+	
+}
+
+// iPad 
+@include media(ipad) {
+
+	.container {
+		width: 100%;
+		padding: 0 20px;
+	}
+
+}
+
+// Tablet (funnels down to phone)
+@include media(tablet) {
+
+	.container {
+		width: 100%;
+		padding: 0 20px;
+	}
+
+	// Select Boxes
+	.select {
+		width: 100%;
+	}
+
+}
+
+// Phone Landscape
+@include media(phone-landscape) {
+	
+	// Menus
+	nav {
+		overflow: hidden;
+	}
+
+	.main-nav {
+		max-height: 0;
+		overflow: hidden;
+		@include transition(all,.2s,0);
+			& ul {
+				width: 100%;
+				overflow: hidden;
+			}
+			& li {
+				display: block;
+				text-align: left;
+				clear: left;
+				margin: 0 0 1px !important;
+			}
+		& .has-submenu.active > a {
+			background: $darkgray !important;
+			color: #fff !important;
+			position: relative;
+			&:hover {
+				background: $darkgray !important;
+			}
+		}
+		& > .has-submenu a span {
+			position: absolute;
+			display: block;
+			right: 0;
+			top: 0;
+			background: $darkgray;
+			color: #fff;
+			padding: 15px 18px;
+			font-weight: 700;
+			display: block;
+		}
+		& > .has-submenu > ul > li > a {
+			background: $lightgray !important;
+			&:hover {
+				background: darken($lightgray,15%) !important;
+			}
+		}
+		& > .has-submenu > ul > li > ul > li > a {
+			background: darken($lightgray,15%) !important;
+			&:hover {
+				background: darken($lightgray,25%) !important;
+			}
+		}
+		& li a {
+			padding: 15px !important;
+			background: #ebebeb !important;
+			border: none !important;
+			color: $darkgray !important;
+			&:hover {
+				background: $lightgray !important;
+			}
+		}
+	}
+
+	.main-nav li ul {
+		max-height: 0;
+		position: static !important;
+		float: left;
+		clear: left;
+		visibility: visible;
+		opacity: 1;
+		margin: 0 !important;
+		width: 100%;
+			& li {
+				width: 100%;
+				clear: left;
+			}
+	}
+
+	.main-nav.active,
+	.main-nav.active > .active > ul,
+	.main-nav.active > .active > ul > .active > ul {
+		max-height: 55em;
+		padding: 0 !important;
+		margin: 1px 0 0 !important;
+		@include transition(all,.5s,0);
+	}
+
+	.menu-icon {
+		display: block;
+	}
+
+	// Select Boxes
+	.select {
+		width: 100%;
+	}
+
+}
+
+// Phone Portrait
+@include media(phone-portrait) {
+	
+}
+
+// Retina 
+@media
+only screen and (-webkit-min-device-pixel-ratio:2),
+only screen and (min--moz-device-pixel-ratio:2),
+only screen and (-moz-min-device-pixel-ratio:2),
+only screen and (-o-min-device-pixel-ratio:2/1),
+only screen and (min-device-pixel-ratio:2),
+only screen and (min-resolution:192dpi),
+only screen and (min-resolution:2dppx) {
+
+
+
+}
