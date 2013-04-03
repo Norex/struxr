@@ -21,7 +21,6 @@
 // =================================================================
 
 
-// Import global SASS
 @import "settings";
 
 
@@ -166,16 +165,19 @@ nav ul {
 }
 
 // Second level slide from top
+
 .main-nav > li:hover > ul {
 	margin-top: 0.5em;
 }
 
 // Second level slide from left
+
 .main-nav > li:hover > ul > li:hover > ul {
 	margin-left: 0;
 }
 
 // IE7 width fix
+
 .lt-ie8 .main-nav li ul li,
 .lt-ie8 .main-nav li ul li a {
 	line-height: 1em;
@@ -188,11 +190,13 @@ nav ul {
 
 
 // Desktop 
+
 @include media(desktop) {
 	
 }
 
 // iPad 
+
 @include media(ipad) {
 
 
@@ -200,6 +204,7 @@ nav ul {
 }
 
 // Tablet (funnels down to phone)
+
 @include media(tablet) {
 
 
@@ -207,6 +212,7 @@ nav ul {
 }
 
 // Phone Landscape
+
 @include media(phone-landscape) {
 	
 	nav {
@@ -304,11 +310,13 @@ nav ul {
 }
 
 // Phone Portrait
+
 @include media(phone-portrait) {
 	
 }
 
 // Retina 
+
 @media
 only screen and (-webkit-min-device-pixel-ratio:2),
 only screen and (min--moz-device-pixel-ratio:2),

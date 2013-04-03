@@ -25,7 +25,6 @@
 // =================================================================
 
 
-// Import global SASS
 @import "settings";
 
 
@@ -33,6 +32,7 @@
 
 
 // Custom selection color 
+
 ::-moz-selection {
 	background: #efefef;
 	text-shadow: none;
@@ -43,17 +43,20 @@
 }
 
 // Force text antialiasing in Webkit browsers
+
 html {
 	-webkit-font-smoothing: antialiased;
 }
 
 // Set base body font size
+
 body {
 	font-size: 16px;
-	// Using the "image-url" path --> background: transparent image-url('body-bg.jpg') repeat;
+	// Example of the "image-url" path --> background: transparent image-url('body-bg.jpg') repeat;
 }
 
 // Sitewide styles
+
 * {
 	@include box-sizing(border-box);
 	@include font-roboto;
@@ -166,12 +169,13 @@ table td {
 	font-size: 0.8em;
 }
 
-// Buttons 
+// Buttons
+
 .btn,
 input[type="submit"],
 input[type="button"],
 input[type="file"]:after {
-	//@include transition(all,.2s,.1s);
+	@include transition(all,.2s,.1s);
 	background: $lightgray;
 	color: $darkgray;
 	padding: 10px 15px;
@@ -188,7 +192,7 @@ input[type="file"]:after {
 		font-size: 1.5em;
 	}
 	&:hover {
-		//@include transition(all,.2s,0);
+		@include transition(all,.2s,0);
 		background: $darkgray;
 		color: #fff;
 	}
@@ -350,7 +354,7 @@ input[type="email"],
 textarea {
 	border: 1px solid $lightgray;
 	background: #fff;
-	padding: 15px;
+	padding: 10px;
 	@include font-robotocondensed;
 	color: $darkgray;
 	width: 100%;
@@ -358,19 +362,17 @@ textarea {
 	border-radius: 2px;
 }
 
-input[type="file"] {
-	font-size: 0.750em;
-	width: 100%;
-}
-
 textarea {
 	min-height: 250px;
 }
 
 // File Upload Styles (only works in Webkit browsers)
+
 input[type="file"] {
 	position: relative;
 	cursor: pointer;
+	font-size: 0.750em;
+	width: 100%;
 	&:hover:after {
 		background: $darkgray;
 		color: #fff;
@@ -394,6 +396,8 @@ input[type="file"]:after {
 	-webkit-appearance: none;
 }
 
+// Gravity Forms
+
 .gform_wrapper {
 	clear: left;
 }
@@ -402,10 +406,30 @@ input[type="file"]:after {
 	width: 100%;
 	margin-bottom: 20px;
 	position: relative;
+	& ul {
+		width: 100%;
+		float: left;
+		margin: 5px 0 0;
+		& li {
+			float: left;
+			width: auto;
+			margin-right: 15px;
+			& div {
+				float: left;
+			}
+			& label {
+				font-weight: 700;
+				float: left;
+				font-size: 0.9em;
+				padding-left: 5px;
+				line-height: 1.5;
+			}
+		}
+	}
 }
 
-
 // Validation Overrides (Gravity Forms)
+
 .gfield_error {
 	background: transparent!important;
 	padding: 0!important;
@@ -414,6 +438,7 @@ input[type="file"]:after {
 }
 
 // Tooltips/Validation Messages
+
 .tooltip {
 	position: absolute;
 	left: 0;
@@ -461,6 +486,7 @@ input[type="file"]:after {
 }
 
 // Custom Select Boxes
+
 .s-hidden {
 	visibility: hidden;
 	padding-right: 10px;
@@ -543,8 +569,20 @@ input[type="file"]:after {
 	display: none;
 }
 
-.full-width {
+.full {
 	width: 100%;
+}
+
+.half {
+	width: 50%;
+}
+
+.third {
+	width: 33.3%;
+}
+
+.quarter {
+	width: 25%;
 }
 
 .callout {
@@ -558,7 +596,8 @@ input[type="file"]:after {
 	}
 }
 
-// FitVids
+// FitVids Clearing
+
 .video-wrapper {
 	clear: left;
 }
@@ -574,11 +613,13 @@ input[type="file"]:after {
 
 
 // Desktop 
+
 @include media(desktop) {
 	
 }
 
 // iPad 
+
 @include media(ipad) {
 
 	.container {
@@ -589,6 +630,7 @@ input[type="file"]:after {
 }
 
 // Tablet (funnels down to phone)
+
 @include media(tablet) {
 
 	.container {
@@ -597,6 +639,7 @@ input[type="file"]:after {
 	}
 
 	// Select Boxes
+
 	.select {
 		width: 100%;
 	}
@@ -604,110 +647,21 @@ input[type="file"]:after {
 }
 
 // Phone Landscape
+
 @include media(phone-landscape) {
+
 	
-	// Menus
-	nav {
-		overflow: hidden;
-	}
-
-	.main-nav {
-		max-height: 0;
-		overflow: hidden;
-		@include transition(all,.2s,0);
-			& ul {
-				width: 100%;
-				overflow: hidden;
-			}
-			& li {
-				display: block;
-				text-align: left;
-				clear: left;
-				margin: 0 0 1px !important;
-			}
-		& .has-submenu.active > a {
-			background: $darkgray !important;
-			color: #fff !important;
-			position: relative;
-			&:hover {
-				background: $darkgray !important;
-			}
-		}
-		& > .has-submenu a span {
-			position: absolute;
-			display: block;
-			right: 0;
-			top: 0;
-			background: $darkgray;
-			color: #fff;
-			padding: 15px 18px;
-			font-weight: 700;
-			display: block;
-		}
-		& > .has-submenu > ul > li > a {
-			background: $lightgray !important;
-			&:hover {
-				background: darken($lightgray,15%) !important;
-			}
-		}
-		& > .has-submenu > ul > li > ul > li > a {
-			background: darken($lightgray,15%) !important;
-			&:hover {
-				background: darken($lightgray,25%) !important;
-			}
-		}
-		& li a {
-			padding: 15px !important;
-			background: #ebebeb !important;
-			border: none !important;
-			color: $darkgray !important;
-			&:hover {
-				background: $lightgray !important;
-			}
-		}
-	}
-
-	.main-nav li ul {
-		max-height: 0;
-		position: static !important;
-		float: left;
-		clear: left;
-		visibility: visible;
-		opacity: 1;
-		margin: 0 !important;
-		width: 100%;
-			& li {
-				width: 100%;
-				clear: left;
-			}
-	}
-
-	.main-nav.active,
-	.main-nav.active > .active > ul,
-	.main-nav.active > .active > ul > .active > ul {
-		max-height: 55em;
-		padding: 0 !important;
-		margin: 1px 0 0 !important;
-		@include transition(all,.5s,0);
-	}
-
-	.menu-icon {
-		display: block;
-	}
-
-	// Select Boxes
-	.select {
-		width: 100%;
-	}
 
 }
 
 // Phone Portrait
+
 @include media(phone-portrait) {
 	
 }
 
 // Retina 
+
 @media
 only screen and (-webkit-min-device-pixel-ratio:2),
 only screen and (min--moz-device-pixel-ratio:2),
