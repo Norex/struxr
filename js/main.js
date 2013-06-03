@@ -91,7 +91,7 @@
 
 		    var $styledSelect = $this.next('div.styled-select');
 
-		    $styledSelect.text($this.children('option').eq(0).text());
+		    $this.val() ? $styledSelect.text($this.children('option:selected').text()) : $styledSelect.text($this.children('option').eq(0).text());
 
 		    var $list = $('<ul />', {
 		        'class': 'options'
@@ -119,6 +119,7 @@
 		        $styledSelect.text($(this).text()).removeClass('active');
 		        $this.val($(this).attr('rel'));
 		        $list.hide();
+		        $this.change();
 		    });
 
 		    $(document).click(function() {

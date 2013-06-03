@@ -142,9 +142,9 @@
 	
 }
 
-// iPad
+// Netbook
 
-@include media(ipad) {
+@include media(netbook) {
 
 	.main-content {
 		@include flexorder(1);
@@ -170,6 +170,14 @@
 
 }
 
+// iPad
+
+@include media(ipad) {
+
+	
+
+}
+
 // Tablet (funnels down to phone)
 
 @include media(tablet) {
@@ -182,6 +190,7 @@
 	.main-content {
 		@include flexorder(1);
 		padding: 0;
+		width: 100%;
 	}
 
 	.side-nav {
@@ -198,6 +207,11 @@
 
 @include media(phone-landscape) {
 	
+	.side-nav,
+	.right-nav {
+		width: 100%;
+	}
+
 }
 
 // Phone Portrait
