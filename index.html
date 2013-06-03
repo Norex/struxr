@@ -34,8 +34,15 @@
         <!-- Vegas Background CSS (optional) -->
         <link rel="stylesheet" href="css/jquery.vegas.css">
 
-        <!-- Include flexbox (optional) -->
+        <!-- Include Flexbox (optional) -->
         <link rel="stylesheet" href="css/flexbox.css">
+
+        <!-- Gallery CSS (optional) -->
+        <link rel="stylesheet" href="css/gallery.build.css">
+        <link rel="stylesheet" href="css/gallery.theme.css">
+
+        <!-- Custom Animations -->
+        <link rel="stylesheet" href="css/animate.css">
 
         <!-- Custom form elements -->
         <link rel="stylesheet" href="css/skins/square/grey.css">
@@ -56,7 +63,7 @@
             <div class="container">
                 <h1 class="callout"><em><</em>struxr<em>></em></h1>
                 <nav>
-                    <a href="#" class="menu-icon" id="menu-expand"><i class="icon-list"></i> Show Menu</a>
+                    <a href="#" class="menu-icon" id="menu-expand"><i class="icon-reorder"></i> Show Menu</a>
                     <ul class="main-nav" id="main-navigation">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
@@ -80,6 +87,32 @@
             <!-- End Header Container -->
 
         </header>
+
+        <!-- Gallery CSS (Optional) -->
+        <div class="gallery autoplay items-3">
+            <div id="item-1" class="control-operator"></div>
+            <div id="item-2" class="control-operator"></div>
+            <div id="item-3" class="control-operator"></div>
+
+            <figure class="item">
+                <h1>Item 1</h1>
+            </figure>
+
+            <figure class="item">
+                <h1>Item 2</h1>
+            </figure>
+
+            <figure class="item">
+                <h1>Item 3</h1>
+            </figure>
+
+            <div class="controls">
+                <a href="#item-1" class="control-button">•</a>
+                <a href="#item-2" class="control-button">•</a>
+                <a href="#item-3" class="control-button">•</a>
+            </div>
+        </div>
+        <!-- End Gallery -->
 
         <section class="main">
 
@@ -199,7 +232,7 @@
                                     </select>
                                 </li>
                                 <li>
-                                    <input type="submit" value="Send 'er Off!">
+                                    <input type="submit" value="Send 'er Off!" class="animated flash">
                                 </li>
                             </ul>
                         </form>

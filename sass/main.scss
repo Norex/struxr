@@ -31,6 +31,10 @@
 // ==|== S:01 Generic Site Styles ==================================
 
 
+body > ins {
+	display: none!important;
+}
+
 // Custom selection color 
 
 ::-moz-selection {
@@ -175,7 +179,7 @@ table td {
 input[type="submit"],
 input[type="button"],
 input[type="file"]:after {
-	@include transition(all,.2s,.1s);
+	// @include transition(all,.2s,.1s);
 	background: $lightgray;
 	color: $darkgray;
 	padding: 10px 15px;
@@ -192,13 +196,15 @@ input[type="file"]:after {
 		font-size: 1.5em;
 	}
 	&:hover {
-		@include transition(all,.2s,0);
+		// @include transition(all,.2s,0);
 		background: $darkgray;
 		color: #fff;
 	}
 }
 
 // Arrows
+// Note: If a wider arrow is required, increase the opposing border width values to twice that of the target border
+// Example: If you wanted a wider arrow pointing up your border width would be "10px 20px"
 
 .add-arrow:after {
 	position: absolute;
@@ -400,35 +406,43 @@ input[type="file"]:after {
 
 .gform_wrapper {
 	clear: left;
-}
-
-.gform_wrapper li {
-	width: 100%;
-	margin-bottom: 20px;
-	position: relative;
-	& ul {
+	& li {
 		width: 100%;
 		float: left;
-		margin: 5px 0 0;
-		& li {
+		margin-bottom: 20px;
+		position: relative;
+		& ul {
+			width: 100%;
 			float: left;
-			width: auto;
-			margin-right: 15px;
-			& div {
+			margin: 5px 0 0;
+			& li {
 				float: left;
-			}
-			& label {
-				font-weight: 700;
-				float: left;
-				font-size: 0.9em;
-				padding-left: 5px;
-				line-height: 1.5;
+				width: auto;
+				margin-right: 15px;
+				& div {
+					float: left;
+				}
+				& label {
+					font-weight: 700;
+					float: left;
+					font-size: 0.9em;
+					padding-left: 5px;
+					line-height: 1.5;
+				}
 			}
 		}
 	}
 }
 
 // Validation Overrides (Gravity Forms)
+
+.gforms_confirmation_message {
+	width: 100%;
+	text-align: center;
+	font-weight: 700;
+	font-size: 0.8em;
+	color: $darkgray;
+}
 
 .gfield_error {
 	background: transparent!important;
@@ -550,6 +564,7 @@ input[type="file"]:after {
 		padding: 5px;
 		margin: 0 0;
 		padding: 5px 10px;
+		width: 100%!important;
 		&:hover {
 			background: $darkgray;
 			color: #fff;
@@ -557,16 +572,30 @@ input[type="file"]:after {
 	}
 }
 
+// Maps
+
+#map_canvas {
+	// Add dimensions if necessary
+	img {
+		max-width: none!important;
+	}
+	div {
+		box-sizing: content-box;
+		-moz-box-sizing: content-box;
+		-webkit-box-sizing: content-box;
+	}
+}
+
 
 // ==|== S:08 Helper Classes =======================================
 
 
-.last {
-	margin-right: 0;
-}
-
 .hide {
 	display: none;
+}
+
+.show {
+	display: block;
 }
 
 .full {
@@ -596,6 +625,10 @@ input[type="file"]:after {
 	}
 }
 
+.last {
+	margin-right: 0;
+}
+
 // FitVids Clearing
 
 .video-wrapper {
@@ -620,12 +653,20 @@ input[type="file"]:after {
 
 // iPad 
 
-@include media(ipad) {
+@include media(netbook) {
 
 	.container {
 		width: 100%;
 		padding: 0 20px;
 	}
+
+}
+
+// iPad 
+
+@include media(ipad) {
+
+	
 
 }
 
