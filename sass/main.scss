@@ -283,27 +283,25 @@ input[type="file"]:after {
 .pagination {
 	@include reset;
 	text-align: center;
-}
-
-.pagination li {
-	display: inline-block;
-}
-
-.pagination li a {
-	font-weight: 700;
-	font-size: 1rem;
-	padding: 0 5px;
-	color: $darkgray;
-		&:hover {
-			color: $lightgray;
-		}
-		&.active {
+	li {
+		@include inblock(middle);
+		a {
 			font-weight: 700;
-			font-size: 1.250em;
-			color: #000;
-			cursor: default;
-			pointer-events: none;
+			font-size: 1rem;
+			padding: 0 5px;
+			color: $darkgray;
+			&:hover {
+				color: $lightgray;
+			}
+			&.active {
+				font-weight: 700;
+				font-size: 1.250em;
+				color: #000;
+				cursor: default;
+				pointer-events: none;
+			}
 		}
+	}
 }
 
 // Tabs
@@ -313,10 +311,10 @@ input[type="file"]:after {
 	width: 100%;
 	float: left;
 	border-bottom: 1px solid $lightgray;
-	& li {
+	li {
 		float: left;
 		margin: 0 3px -1px 3px;
-		& a {
+		a {
 			display: block;
 			background: lighten($lightgray,8%);
 			color: $darkgray;
@@ -396,7 +394,7 @@ input[type="file"]::-webkit-file-upload-button {
 input[type="file"]:after {
 	content: "Upload File";
 	cursor: pointer;
-	display: inline-block;
+	@include inblock(middle);
 	position: relative;
 	background: $lightgray;
 	-webkit-appearance: none;
@@ -406,23 +404,23 @@ input[type="file"]:after {
 
 .gform_wrapper {
 	clear: left;
-	& li {
+	li {
 		width: 100%;
 		float: left;
 		margin-bottom: 20px;
 		position: relative;
-		& ul {
+		ul {
 			width: 100%;
 			float: left;
 			margin: 5px 0 0;
-			& li {
+			li {
 				float: left;
 				width: auto;
 				margin-right: 15px;
-				& div {
+				div {
 					float: left;
 				}
-				& label {
+				label {
 					font-weight: 700;
 					float: left;
 					font-size: 0.9em;
@@ -508,7 +506,7 @@ input[type="file"]:after {
 
 .select {
 	cursor: pointer;
-	display: inline-block;
+	@include inblock(middle);
 	position: relative;
 	@include font-robotocondensed;
 	color: $darkgray;
@@ -560,7 +558,7 @@ input[type="file"]:after {
 	list-style: none;
 	border: 1px solid $lightgray;
 	background: #fff;
-	& li {
+	li {
 		padding: 5px;
 		margin: 0 0;
 		padding: 5px 10px;
@@ -618,7 +616,7 @@ input[type="file"]:after {
 	font-size: 4em;
 	line-height: 1em;
 	font-weight: 700;
-	& em {
+	em {
 		font-style: normal;
 		color: #eb1e5b;
 		@include font-robotocondensed;
@@ -651,7 +649,7 @@ input[type="file"]:after {
 	
 }
 
-// iPad 
+// Netbook 
 
 @include media(netbook) {
 

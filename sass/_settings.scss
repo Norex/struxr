@@ -68,6 +68,13 @@ $norexgreen: #47aa42;
 	-ms-transition: $property $duration ease $delay;
 }
 
+// Inline Block
+
+@mixin inblock($valign) {
+	display: inline-block;
+	vertical-align: $valign;
+}
+
 // Grayscale Filter (On and Off)
 
 @mixin filter-gray {

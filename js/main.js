@@ -71,11 +71,11 @@
 			// });
 
 		// Custom Form Elements
-		  $('input').iCheck({
-		    checkboxClass: 'icheckbox_square-grey',
-		    radioClass: 'iradio_square-grey',
-		    increaseArea: '20%' // optional
-		  });
+		$('input').iCheck({
+		  checkboxClass: 'icheckbox_square-grey',
+		  radioClass: 'iradio_square-grey',
+		  increaseArea: '20%' // optional
+		});
 
 		// Custom Select Boxes
 		$('select').each(function() {
