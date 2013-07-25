@@ -69,10 +69,10 @@ nav ul {
 	font-weight: 700;
 	line-height: 1em;
 	text-transform: uppercase;
-	@include transition(all,.1s,0);
+	@include transition(all,.1s,0s);
 		&:hover {
 			color: #ccc;
-			@include transition(all,.1s,0);
+			@include transition(all,.1s,0s);
 		}
 		& span {
 			display: none;
@@ -132,7 +132,7 @@ nav ul {
 	min-width: 0;
 	top: 0;
 	margin-left: -0.5em;
-	@include transition(all,.2s,0);
+	@include transition(all,.2s,0s);
 	z-index: 1;
 }
 
@@ -154,14 +154,14 @@ nav ul {
 .main-nav > li > ul > li > ul {
 	visibility: hidden;
 	opacity: 0;
-	@include transition(all,.05s,0);
+	@include transition(all,.05s,0s);
 }
 
 .main-nav > li:hover > ul,
 .main-nav > li > ul > li:hover > ul {
 	visibility: visible;
 	opacity: 1;
-	@include transition(all,.2s,0);
+	@include transition(all,.2s,0s);
 }
 
 // Second level slide from top
@@ -230,7 +230,7 @@ nav ul {
 	.main-nav {
 		max-height: 0;
 		overflow: hidden;
-		@include transition(all,.2s,0);
+		@include transition(all,.2s,0s);
 			& ul {
 				width: 100%;
 				overflow: hidden;
@@ -306,7 +306,7 @@ nav ul {
 		max-height: 55em;
 		padding: 0 !important;
 		margin: 1px 0 0 !important;
-		@include transition(all,.5s,0);
+		@include transition(all,.5s,0s);
 		visibility:visible;
 		opacity:1;
 	}

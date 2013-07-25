@@ -197,7 +197,7 @@ input[type="file"]:after {
 		font-size: 1.5em;
 	}
 	&:hover {
-		// @include transition(all,.2s,0);
+		// @include transition(all,.2s,0s);
 		background: $darkgray;
 		color: #fff;
 	}
@@ -322,7 +322,7 @@ input[type="file"]:after {
 			font-weight: 700;
 			padding: 10px 15px;
 			border: 1px solid $lightgray;
-			@include transition(all,.2s,0);
+			@include transition(all,.2s,0s);
 			border-radius: 2px 2px 0 0;
 			&:hover {
 				background: lighten($lightgray,4%);
@@ -330,7 +330,7 @@ input[type="file"]:after {
 			&.active {
 				background: #fff;
 				border-bottom-color: #fff;
-				@include transition(all,.2s,0);
+				@include transition(all,.2s,0s);
 			}
 		}
 	}
