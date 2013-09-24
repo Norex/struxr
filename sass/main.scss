@@ -99,6 +99,10 @@ body {
 // ==|== S:06 Typography ===========================================
 
 
+img {
+	max-width: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -130,10 +134,6 @@ h5 {
 
 h6 {
 
-}
-
-ul {
-	@include reset;
 }
 
 p,
@@ -185,6 +185,7 @@ input[type="file"]:after {
 	padding: 10px 15px;
 	font-size: 1rem;
 	position: relative;
+	display: block;
 	border: none;
 	@include font-robotocondensed;
 	&.big {
@@ -196,7 +197,7 @@ input[type="file"]:after {
 		font-size: 1.5em;
 	}
 	&:hover {
-		// @include transition(all,.2s,0);
+		// @include transition(all,.2s,0s);
 		background: $darkgray;
 		color: #fff;
 	}
@@ -321,7 +322,7 @@ input[type="file"]:after {
 			font-weight: 700;
 			padding: 10px 15px;
 			border: 1px solid $lightgray;
-			@include transition(all,.2s,0);
+			@include transition(all,.2s,0s);
 			border-radius: 2px 2px 0 0;
 			&:hover {
 				background: lighten($lightgray,4%);
@@ -329,7 +330,7 @@ input[type="file"]:after {
 			&.active {
 				background: #fff;
 				border-bottom-color: #fff;
-				@include transition(all,.2s,0);
+				@include transition(all,.2s,0s);
 			}
 		}
 	}
@@ -364,6 +365,11 @@ textarea {
 	width: 100%;
 	box-shadow: 3px 3px 10px 0 #f1f1f1 inset;
 	border-radius: 2px;
+	outline: none;
+	&:focus {
+		border: 1px solid #00c8d7;
+		box-shadow: 3px 3px 10px 0 #f1f1f1 inset, 0 0 4px 0 transparentize(#00c8d7,0.4);
+	}
 }
 
 textarea {
@@ -526,6 +532,7 @@ input[type="file"]:after {
 	font-weight: bold;
 	line-height: 53px; // Must change based on how large the parent selectbox is
 	box-shadow: 3px 3px 10px 0 #f1f1f1 inset;
+	margin: 1px;
 }
 
 .styled-select:after {
@@ -542,7 +549,9 @@ input[type="file"]:after {
 
 .styled-select:active,
 .styled-select.active {
-	background: #eee;
+	border: 1px solid #00c8d7;
+	margin: 0;
+	box-shadow: 3px 3px 10px 0 #f1f1f1 inset, 0 0 4px 0 transparentize(#00c8d7,0.4);
 }
 
 .options {

@@ -75,6 +75,22 @@ $norexgreen: #47aa42;
 	vertical-align: $valign;
 }
 
+// Expand/Collapse
+
+@mixin expand-it {
+	opacity: 1;
+	max-height: 55em;
+	overflow: visible;
+	visibility: visible;
+}
+
+@mixin collapse-it {
+	opacity: 0;
+	max-height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+
 // Grayscale Filter (On and Off)
 
 @mixin filter-gray {
