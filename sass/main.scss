@@ -366,6 +366,10 @@ textarea {
 	box-shadow: 3px 3px 10px 0 #f1f1f1 inset;
 	border-radius: 2px;
 	outline: none;
+	&:focus {
+		border: 1px solid #00c8d7;
+		box-shadow: 3px 3px 10px 0 #f1f1f1 inset, 0 0 4px 0 transparentize(#00c8d7,0.4);
+	}
 }
 
 textarea {
@@ -528,6 +532,7 @@ input[type="file"]:after {
 	font-weight: bold;
 	line-height: 53px; // Must change based on how large the parent selectbox is
 	box-shadow: 3px 3px 10px 0 #f1f1f1 inset;
+	margin: 1px;
 }
 
 .styled-select:after {
@@ -544,7 +549,9 @@ input[type="file"]:after {
 
 .styled-select:active,
 .styled-select.active {
-	background: #eee;
+	border: 1px solid #00c8d7;
+	margin: 0;
+	box-shadow: 3px 3px 10px 0 #f1f1f1 inset, 0 0 4px 0 transparentize(#00c8d7,0.4);
 }
 
 .options {
