@@ -113,7 +113,7 @@ h6 {
 }
 
 h1 {
-	font-weight: 100;
+	font-weight: 300;
 }
 
 h2 {
@@ -139,7 +139,11 @@ h6 {
 p,
 ul li,
 ol li {
+	
+}
 
+ul {
+	@include reset;
 }
 
 a {
@@ -173,12 +177,22 @@ table td {
 	font-size: 0.8em;
 }
 
+.icheckbox_square-grey,
+.iradio_square-grey {
+	float: left;
+}
+
+.gallery .item h1 {
+	color: #fff;
+	font-weight: 300;
+}
+
 // Buttons
 
 .btn,
 input[type="submit"],
 input[type="button"],
-input[type="file"]:after {
+button {
 	// @include transition(all,.2s,.1s);
 	background: $lightgray;
 	color: $darkgray;
