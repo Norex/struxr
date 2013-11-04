@@ -46,20 +46,22 @@
 		// FitVids
 		$(".video-wrapper").fitVids();
 
-		// HTML5 Placeholders in IE9 and below
-		$('[placeholder]').focus(function() {
-			var input = $(this);
-			if (input.val() == input.attr('placeholder')) {
-				input.val('');
-				input.removeClass('placeholder');
-			}
-		}).blur(function() {
-			var input = $(this);
-			if (input.val() == '' || input.val() == input.attr('placeholder')) {
-				input.addClass('placeholder');
-				input.val(input.attr('placeholder'));
-			}
-		}).blur();
+        if(!('placeholder' in document.createElement('input'))){
+            // HTML5 Placeholders in IE9 and below
+            $('[placeholder]').focus(function() {
+                var input = $(this);
+                if (input.val() == input.attr('placeholder')) {
+                    input.val('');
+                    input.removeClass('placeholder');
+                }
+            }).blur(function() {
+                var input = $(this);
+                if (input.val() == '' || input.val() == input.attr('placeholder')) {
+                    input.addClass('placeholder');
+                    input.val(input.attr('placeholder'));
+                }
+            }).blur();
+        }
 
 		// Vegas (optional)
 			// $.vegas('overlay',{
