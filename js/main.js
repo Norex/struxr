@@ -61,15 +61,6 @@
 			}
 		}).blur();
 
-		// Vegas (optional)
-			// $.vegas('overlay',{
-			// 	src: '/img/overlays/032.png'
-			// });
-			// $.vegas({
-			// 	src: '/img/body-bg.jpg',
-			// 	loading: false
-			// });
-
 		// Custom Form Elements
 		$('input').iCheck({
 		  checkboxClass: 'icheckbox_square-grey',

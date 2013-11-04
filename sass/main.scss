@@ -64,6 +64,7 @@ body {
 * {
 	@include box-sizing(border-box);
 	@include font-roboto;
+	outline: none;
 }
 
 .container {
@@ -214,6 +215,37 @@ button {
 		// @include transition(all,.2s,0s);
 		background: $darkgray;
 		color: #fff;
+	}
+}
+
+// Pressy Button
+button.pressy {
+	width: 250px;
+	height: 75px;
+	margin: 20px 0 0;
+	background: $darkgray;
+	&:after {
+		display: block;
+		opacity: 0;
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		background: transparent;
+		border-radius: 120px;
+		content: " ";
+		left: 50%;
+		top: 50%;
+		@include transition(all,0.35s,0s);
+		margin: -15px 0 0 -15px;
+		box-shadow: 0 0 30px rgba(255,255,255,0.1), inset 0 0 25px rgba(255,255,255,0.05), inset 0 0 10px rgba(255,255,255,0.05);
+	}
+	&:active {
+		&:after {
+			@include transition(all,0.1s,0s);
+			box-shadow: 0 0 40px rgba(255,255,255,0.2), inset 0 0 20px rgba(255,255,255,0.1), inset 0 0 10px rgba(255,255,255,0.05);
+			opacity: 1;
+			-webkit-transform: scale(2.25);
+		}
 	}
 }
 
@@ -576,14 +608,14 @@ input[type="file"]:after {
 	right: 0;
 	left: 0;
 	z-index: 999;
-	margin: 0 0;
-	padding: 0 0;
+	margin: 0;
+	padding: 0;
 	list-style: none;
 	border: 1px solid $lightgray;
 	background: #fff;
 	li {
 		padding: 5px;
-		margin: 0 0;
+		margin: 0;
 		padding: 5px 10px;
 		width: 100%!important;
 		&:hover {
@@ -631,19 +663,12 @@ input[type="file"]:after {
 	width: 33.3%;
 }
 
-.quarter {
-	width: 25%;
+.two-thirds {
+	width: 66.6%;
 }
 
-.callout {
-	font-size: 4em;
-	line-height: 1em;
-	font-weight: 700;
-	em {
-		font-style: normal;
-		color: #eb1e5b;
-		@include font-robotocondensed;
-	}
+.quarter {
+	width: 25%;
 }
 
 .last {
@@ -691,7 +716,7 @@ input[type="file"]:after {
 
 }
 
-// Tablet (funnels down to phone)
+// Tablet
 
 @include media(tablet) {
 
@@ -708,11 +733,27 @@ input[type="file"]:after {
 
 }
 
+// Tweener
+
+@include media(tweener) {
+
+	
+
+}
+
 // Phone Landscape
 
 @include media(phone-landscape) {
 
-	
+	// Responsive Tables
+
+	.table-holder {
+		width: 100%;
+		overflow: auto;
+		table {
+			width: 250%;
+		}
+	}
 
 }
 
