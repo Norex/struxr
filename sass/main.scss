@@ -671,6 +671,17 @@ input[type="file"]:after {
 	width: 25%;
 }
 
+.callout {
+	font-size: 4em;
+	line-height: 1em;
+	font-weight: 700;
+	em {
+		font-style: normal;
+		color: #eb1e5b;
+		@include font-robotocondensed;
+	}
+}
+
 .last {
 	margin-right: 0;
 }
