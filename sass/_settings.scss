@@ -132,6 +132,12 @@ $norexgreen: #47aa42;
 		}
 	}
 
+	@else if $type == tweener {
+		@media (max-width: 550px) {
+			@content;
+		}
+	}
+
 	@else if $type == phone-landscape {
 		@media (max-width: 480px) {
 			@content;

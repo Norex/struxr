@@ -1,1 +1,83 @@
-.gallery .control-operator:target ~ .controls .control-button{color:#ccc;color:rgba(255,255,255,0.4)}.gallery .control-button:first-of-type,.items-2 .control-operator:nth-of-type(1):target ~ .controls .control-button:nth-of-type(1),.items-2 .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2),.items-3 .control-operator:nth-of-type(1):target ~ .controls .control-button:nth-of-type(1),.items-3 .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2),.items-3 .control-operator:nth-of-type(3):target ~ .controls .control-button:nth-of-type(3),.items-4 .control-operator:nth-of-type(1):target ~ .controls .control-button:nth-of-type(1),.items-4 .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2),.items-4 .control-operator:nth-of-type(3):target ~ .controls .control-button:nth-of-type(3),.items-4 .control-operator:nth-of-type(4):target ~ .controls .control-button:nth-of-type(4),.items-5 .control-operator:nth-of-type(1):target ~ .controls .control-button:nth-of-type(1),.items-5 .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2),.items-5 .control-operator:nth-of-type(3):target ~ .controls .control-button:nth-of-type(3),.items-5 .control-operator:nth-of-type(4):target ~ .controls .control-button:nth-of-type(4),.items-5 .control-operator:nth-of-type(5):target ~ .controls .control-button:nth-of-type(5){color:white;color:rgba(255,255,255,0.8)}.gallery .item:first-of-type{position:static;opacity:1}.gallery .item{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;transition:opacity .5s}.gallery .control-operator{display:none}.gallery .control-operator:target ~ .item{pointer-events:none;opacity:0;animation:none}.gallery .control-operator:target ~ .controls .control-button{animation:none}@keyframes controlAnimation-2{0%{color:#ccc;color:rgba(255,255,255,0.4)}14.28571%,50%{color:white;color:rgba(255,255,255,0.8)}64.28571%,100%{color:#ccc;color:rgba(255,255,255,0.4)}}@keyframes galleryAnimation-2{0%{opacity:0}14.28571%,50%{opacity:1}64.28571%,100%{opacity:0}}.items-2.autoplay .control-button{animation:controlAnimation-2 14s infinite}.items-2.autoplay .item{animation:galleryAnimation-2 14s infinite}.items-2 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1){pointer-events:auto;opacity:1}.items-2 .control-button:nth-of-type(1),.items-2 .item:nth-of-type(1){animation-delay:-2s}.items-2 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2){pointer-events:auto;opacity:1}.items-2 .control-button:nth-of-type(2),.items-2 .item:nth-of-type(2){animation-delay:5s}@keyframes controlAnimation-3{0%{color:#ccc;color:rgba(255,255,255,0.4)}9.52381%,33.33333%{color:white;color:rgba(255,255,255,0.8)}42.85714%,100%{color:#ccc;color:rgba(255,255,255,0.4)}}@keyframes galleryAnimation-3{0%{opacity:0}9.52381%,33.33333%{opacity:1}42.85714%,100%{opacity:0}}.items-3.autoplay .control-button{animation:controlAnimation-3 21s infinite}.items-3.autoplay .item{animation:galleryAnimation-3 21s infinite}.items-3 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1){pointer-events:auto;opacity:1}.items-3 .control-button:nth-of-type(1),.items-3 .item:nth-of-type(1){animation-delay:-2s}.items-3 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2){pointer-events:auto;opacity:1}.items-3 .control-button:nth-of-type(2),.items-3 .item:nth-of-type(2){animation-delay:5s}.items-3 .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3){pointer-events:auto;opacity:1}.items-3 .control-button:nth-of-type(3),.items-3 .item:nth-of-type(3){animation-delay:12s}@keyframes controlAnimation-4{0%{color:#ccc;color:rgba(255,255,255,0.4)}7.14286%,25%{color:white;color:rgba(255,255,255,0.8)}32.14286%,100%{color:#ccc;color:rgba(255,255,255,0.4)}}@keyframes galleryAnimation-4{0%{opacity:0}7.14286%,25%{opacity:1}32.14286%,100%{opacity:0}}.items-4.autoplay .control-button{animation:controlAnimation-4 28s infinite}.items-4.autoplay .item{animation:galleryAnimation-4 28s infinite}.items-4 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1){pointer-events:auto;opacity:1}.items-4 .control-button:nth-of-type(1),.items-4 .item:nth-of-type(1){animation-delay:-2s}.items-4 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2){pointer-events:auto;opacity:1}.items-4 .control-button:nth-of-type(2),.items-4 .item:nth-of-type(2){animation-delay:5s}.items-4 .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3){pointer-events:auto;opacity:1}.items-4 .control-button:nth-of-type(3),.items-4 .item:nth-of-type(3){animation-delay:12s}.items-4 .control-operator:nth-of-type(4):target ~ .item:nth-of-type(4){pointer-events:auto;opacity:1}.items-4 .control-button:nth-of-type(4),.items-4 .item:nth-of-type(4){animation-delay:19s}@keyframes controlAnimation-5{0%{color:#ccc;color:rgba(255,255,255,0.4)}5.71429%,20%{color:white;color:rgba(255,255,255,0.8)}25.71429%,100%{color:#ccc;color:rgba(255,255,255,0.4)}}@keyframes galleryAnimation-5{0%{opacity:0}5.71429%,20%{opacity:1}25.71429%,100%{opacity:0}}.items-5.autoplay .control-button{animation:controlAnimation-5 35s infinite}.items-5.autoplay .item{animation:galleryAnimation-5 35s infinite}.items-5 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1){pointer-events:auto;opacity:1}.items-5 .control-button:nth-of-type(1),.items-5 .item:nth-of-type(1){animation-delay:-2s}.items-5 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2){pointer-events:auto;opacity:1}.items-5 .control-button:nth-of-type(2),.items-5 .item:nth-of-type(2){animation-delay:5s}.items-5 .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3){pointer-events:auto;opacity:1}.items-5 .control-button:nth-of-type(3),.items-5 .item:nth-of-type(3){animation-delay:12s}.items-5 .control-operator:nth-of-type(4):target ~ .item:nth-of-type(4){pointer-events:auto;opacity:1}.items-5 .control-button:nth-of-type(4),.items-5 .item:nth-of-type(4){animation-delay:19s}.items-5 .control-operator:nth-of-type(5):target ~ .item:nth-of-type(5){pointer-events:auto;opacity:1}.items-5 .control-button:nth-of-type(5),.items-5 .item:nth-of-type(5){animation-delay:26s}
+/*
+Syntax error: Undefined variable: "$display-duration".
+        on line 4 of /Users/justinbellefontaine/Development/struxr/sass/_gallery.scss, in `gallery'
+        from line 4 of /Users/justinbellefontaine/Development/struxr/sass/gallery.build.scss
+
+1: /Users/justinbellefontaine/Development/struxr/sass/gallery.build.scss
+
+Backtrace:
+/Users/justinbellefontaine/Development/struxr/sass/_gallery.scss:4:in `gallery'
+/Users/justinbellefontaine/Development/struxr/sass/gallery.build.scss:4
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/script/variable.rb:49:in `_perform'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/script/node.rb:40:in `perform'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/script/operation.rb:74:in `_perform'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/script/node.rb:40:in `perform'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:323:in `visit_variable'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:264:in `visit_mixin'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:264:in `map'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:264:in `visit_mixin'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:119:in `with_environment'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:264:in `visit_mixin'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:68:in `perform_arguments'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:259:in `visit_mixin'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:186:in `visit_for'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:186:in `map'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:186:in `visit_for'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/fileutils.rb:243:in `map'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:183:in `each'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:183:in `map'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:183:in `visit_for'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:119:in `with_environment'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:182:in `visit_for'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:107:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:119:in `with_environment'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:106:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:126:in `visit_root'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/root_node.rb:20:in `render'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/engine.rb:315:in `_render'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/lib/sass/../sass/engine.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `compile'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `compile'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `run'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `run'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:68:in `perform'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/bin/compass:30
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/bin/compass:44:in `call'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/bin/compass:44
+/usr/bin/compass:23:in `load'
+/usr/bin/compass:23
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined variable: \"$display-duration\".\A         on line 4 of /Users/justinbellefontaine/Development/struxr/sass/_gallery.scss, in `gallery'\A         from line 4 of /Users/justinbellefontaine/Development/struxr/sass/gallery.build.scss\A \A 1: /Users/justinbellefontaine/Development/struxr/sass/gallery.build.scss"; }

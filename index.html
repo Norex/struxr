@@ -31,18 +31,12 @@
         <link rel="stylesheet" href="css/menus.css">
         <link rel="stylesheet" href="css/print.css" media="print">
 
-        <!-- Vegas Background CSS (optional) -->
-        <link rel="stylesheet" href="css/jquery.vegas.css">
-
         <!-- Include Flexbox (optional) -->
         <link rel="stylesheet" href="css/flexbox.css">
 
         <!-- Gallery CSS Carousel (optional) -->
         <link rel="stylesheet" href="css/gallery.build.css">
         <link rel="stylesheet" href="css/gallery.theme.css">
-
-        <!-- Custom Animation Library -->
-        <link rel="stylesheet" href="css/animate.css">
 
         <!-- Custom form elements -->
         <link rel="stylesheet" href="css/skins/square/grey.css">
@@ -65,8 +59,8 @@
                 <nav>
                     <a href="#" class="menu-icon" id="menu-expand"><i class="icon-reorder"></i> Show Menu</a>
                     <ul class="main-nav" id="main-navigation">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
                         <li class="has-submenu"><a href="#">Services<span class="expand">+</span></a>
                             <ul>
                                 <li><a href="#">Web Development</a></li>
@@ -121,6 +115,7 @@
 
                 <!-- Start Left Column -->
                 <aside class="left-col">
+                    <button class="pressy"></button>
                     <h1>Page Elements</h1>
                     <a class="btn add-arrow arrow-down" href="#">Button</a>
 
@@ -144,38 +139,42 @@
                     </ul>
                     <!-- End Tabs -->
 
-                    <!-- Tables -->
-                    <table>
-                        <thead>
-                        <tr>
-                          <th width="200">Table Header</th>
-                          <th>Table Header</th>
-                          <th width="150">Table Header</th>
-                          <th width="150">Table Header</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Content Goes Here</td>
-                          <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
-                          <td>Content Goes Here</td>
-                          <td>Content Goes Here</td>
-                        </tr>
-                        <tr>
-                          <td>Content Goes Here</td>
-                          <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
-                          <td>Content Goes Here</td>
-                          <td>Content Goes Here</td>
-                        </tr>
-                        <tr>
-                          <td>Content Goes Here</td>
-                          <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
-                          <td>Content Goes Here</td>
-                          <td>Content Goes Here</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <!-- End Table -->
+                    <!-- Responsive Tables -->
+                    <div class="table-holder">
+                        <!-- Tables -->
+                        <table>
+                            <thead>
+                            <tr>
+                              <th width="200">Table Header</th>
+                              <th>Table Header</th>
+                              <th width="150">Table Header</th>
+                              <th width="150">Table Header</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Content Goes Here</td>
+                              <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+                              <td>Content Goes Here</td>
+                              <td>Content Goes Here</td>
+                            </tr>
+                            <tr>
+                              <td>Content Goes Here</td>
+                              <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+                              <td>Content Goes Here</td>
+                              <td>Content Goes Here</td>
+                            </tr>
+                            <tr>
+                              <td>Content Goes Here</td>
+                              <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+                              <td>Content Goes Here</td>
+                              <td>Content Goes Here</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- End Table -->
+                    </div>
+                    <!-- End Responsive Tables -->
 
                     <!-- Gravity Forms -->
                     <div class="gform_wrapper">
@@ -228,7 +227,7 @@
                                     </select>
                                 </li>
                                 <li>
-                                    <button onclick="TogetherJS(this); return false;">Start TogetherJS</button>
+                                    <button>Start TogetherJS</button>
                                 </li>
                             </ul>
                         </form>
@@ -276,20 +275,14 @@
 
         </footer>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 
         <!-- Responsive videos (optional) -->
-        <script src="js/vendor/jquery.fitvids.min.js"></script>
-
-        <!-- Vegas Background JS (optional) -->
-        <script src="js/vendor/jquery.vegas.js"></script>
+        <script src="js/vendor/jquery.fitvids.js"></script>
 
         <!-- Custom form elements -->
         <script src="js/vendor/jquery.icheck.min.js"></script>
-
-        <!-- TogetherJS -->
-        <script src="https://togetherjs.com/togetherjs-min.js"></script>
 
         <!-- Scripts -->
         <script src="js/main.js"></script>
