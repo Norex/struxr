@@ -1,4 +1,4 @@
-@import "variables";
+@import "galleryvariables";
 
 @mixin gallery( $item-count ) {
 	$total-duration: $display-duration * $item-count;
