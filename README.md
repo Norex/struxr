@@ -5,7 +5,6 @@ Front-end Boilerplate
 
 
 ## What is it?
-======
 
 struxr is a front-end, responsive website/app boilerplate built with experienced front-end developers in mind. It uses a combination of HTML5 and CSS3 (SCSS) along with basic JavaScript (jQuery) to create an easy-to-understand and malleable platform for converting static website designs into HTML/CSS templates. With an incredibly basic starting point and open-ended framework, it allows quick and easy rapid prototyping of your web projects.
 
